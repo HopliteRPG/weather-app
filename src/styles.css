@@ -1,3 +1,7 @@
 /* styles.css */
 body {
 }
+
+.weatherDiv {
+  height: 500px;
+}

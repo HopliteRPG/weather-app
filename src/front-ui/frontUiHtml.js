@@ -1,3 +1,5 @@
+export { createFrontUiHtml };
+
 const body = document.querySelector("body");
 const divCreate = document.createElement("div");
 const buttonCreate = document.createElement("button");
@@ -54,4 +56,22 @@ function createInput(div, type, name, inputName) {
 function createFrontUiHtml() {
   let parentDiv = createDivSection(body, "parentDiv");
   let searchbarForm = createForm(parentDiv.cloneDivCreate);
+  let searchbarInput = createInput(
+    searchbarForm.cloneFormCreate,
+    "input",
+    "searchbarInput",
+    "searchbarInput",
+  );
+  let searchButton = createButton(
+    searchbarForm.cloneFormCreate,
+    "Search",
+    "searchButton",
+  );
+
+  let weatherDiv = createDivSection(parentDiv.cloneDivCreate, "weatherDiv");
+  let placeholderP = createP(
+    weatherDiv.cloneDivCreate,
+    "this is a test",
+    "placeholderP",
+  );
 }
