@@ -5,3 +5,15 @@ body {
 .weatherDivContainer {
   height: 500px;
 }
+
+.forecastTitleDiv {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.forecastTitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

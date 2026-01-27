@@ -55,6 +55,18 @@ function createInput(div, type, name, inputName) {
 
 function createFrontUiHtml() {
   let parentDiv = createDivSection(body, "parentDiv");
+
+  let forecastTitleDiv = createDivSection(
+    parentDiv.cloneDivCreate,
+    "forecastTitleDiv",
+  );
+
+  let forecastTitle = createP(
+    forecastTitleDiv.cloneDivCreate,
+    "Weather Forecast",
+    "forecastTitle",
+  );
+
   let searchbarForm = createForm(parentDiv.cloneDivCreate);
   let searchbarInput = createInput(
     searchbarForm.cloneFormCreate,
