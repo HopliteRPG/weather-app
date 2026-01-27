@@ -68,7 +68,15 @@ function createFrontUiHtml() {
     "searchButton",
   );
 
-  let weatherDiv = createDivSection(parentDiv.cloneDivCreate, "weatherDiv");
+  let weatherDivContainer = createDivSection(
+    parentDiv.cloneDivCreate,
+    "weatherDivContainer",
+  );
+
+  let weatherDiv = createDivSection(
+    weatherDivContainer.cloneDivCreate,
+    "weatherDiv",
+  );
   let placeholderP = createP(
     weatherDiv.cloneDivCreate,
     "this is a test",
