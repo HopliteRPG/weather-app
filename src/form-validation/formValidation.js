@@ -5,6 +5,7 @@ function formValidation() {
   let searchBar = document.querySelector(".searchbarInput");
   searchButton.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log(searchBar.value);
+    let encodedSearchTerm = encodeURIComponent(searchBar.value);
+    console.log(encodedSearchTerm);
   });
 }
