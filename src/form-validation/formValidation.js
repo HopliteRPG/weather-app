@@ -1,3 +1,5 @@
+import { getLocationWeather } from "../weather-code/weatherCode";
+
 export { formValidation };
 
 function formValidation() {
@@ -7,5 +9,6 @@ function formValidation() {
     event.preventDefault();
     let encodedSearchTerm = encodeURIComponent(searchBar.value);
     console.log(encodedSearchTerm);
+    getLocationWeather(encodedSearchTerm);
   });
 }
