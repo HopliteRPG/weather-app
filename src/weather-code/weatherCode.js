@@ -12,5 +12,6 @@ async function getLocationWeather(location) {
     console.log(weatherData.currentConditions);
   } catch (error) {
     console.error(error);
+    alert("Location not found try a different one");
   }
 }
