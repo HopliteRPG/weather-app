@@ -55,9 +55,14 @@ function createInput(div, type, name, inputName) {
 
 function createFrontUiHtml() {
   let parentDiv = createDivSection(body, "parentDiv");
+  let topParentDiv = createDivSection(parentDiv.cloneDivCreate, "topParentDiv");
+  let bottomParentDiv = createDivSection(
+    parentDiv.cloneDivCreate,
+    "bottomParentDiv",
+  );
 
   let forecastTitleDiv = createDivSection(
-    parentDiv.cloneDivCreate,
+    topParentDiv.cloneDivCreate,
     "forecastTitleDiv",
   );
 
@@ -67,7 +72,7 @@ function createFrontUiHtml() {
     "forecastTitle",
   );
 
-  let searchbarForm = createForm(parentDiv.cloneDivCreate);
+  let searchbarForm = createForm(topParentDiv.cloneDivCreate);
   let searchbarInput = createInput(
     searchbarForm.cloneFormCreate,
     "input",
@@ -81,7 +86,7 @@ function createFrontUiHtml() {
   );
 
   let weatherDivContainer = createDivSection(
-    parentDiv.cloneDivCreate,
+    bottomParentDiv.cloneDivCreate,
     "weatherDivContainer",
   );
 
