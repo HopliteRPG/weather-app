@@ -52,9 +52,22 @@ function createInput(div, type, name, inputName) {
   return { cloneInputCreate };
 }
 
+function clearWeatherDiv() {
+  const weatherDiv = document.querySelector(".weatherDiv");
+  weatherDiv.innerText = "";
+}
+
 function createWeatherGrid(weatherWeek) {
+  clearWeatherDiv();
   const weatherWeekForcast = weatherWeek.slice(0, 7);
+  const weatherDiv = document.querySelector(".weatherDiv");
   weatherWeekForcast.forEach((day) => {
+    let dayDiv = createDivSection(weatherDiv, "dayDiv");
+    let dayWeatherReport = createP(
+      dayDiv.cloneDivCreate,
+      day.conditions,
+      "dayWeatherReport",
+    );
     console.log(day);
   });
 }
