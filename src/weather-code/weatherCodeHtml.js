@@ -63,6 +63,7 @@ function createWeatherGrid(weatherWeek) {
   const weatherDiv = document.querySelector(".weatherDiv");
   weatherWeekForcast.forEach((day) => {
     let dayDiv = createDivSection(weatherDiv, "dayDiv");
+    let dayTemp = createP(dayDiv.cloneDivCreate, day.temp, "dayTemp");
     let dayWeatherReport = createP(
       dayDiv.cloneDivCreate,
       day.conditions,
