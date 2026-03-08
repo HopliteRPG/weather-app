@@ -64,6 +64,9 @@ function createWeatherGrid(weatherWeek) {
   weatherWeekForcast.forEach((day) => {
     let dayDiv = createDivSection(weatherDiv, "dayDiv");
     let dayTemp = createP(dayDiv.cloneDivCreate, day.temp, "dayTemp");
+    let minAndMaxDiv = createDivSection(dayDiv.cloneDivCreate, "minAndMaxDiv");
+    let minTemp = createP(minAndMaxDiv.cloneDivCreate, day.tempmin, "minTemp");
+    let maxTemp = createP(minAndMaxDiv.cloneDivCreate, day.tempmax, "maxTemp");
     let dayWeatherReport = createP(
       dayDiv.cloneDivCreate,
       day.conditions,
