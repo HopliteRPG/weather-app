@@ -69,16 +69,31 @@ function createWeatherGrid(weatherWeek) {
       "minAndMaxDiv",
     );
 
-    let minTemp = createP(
+    let minTempDiv = createDivSection(
       minAndMaxDivContainer.cloneDivCreate,
-      day.tempmin,
-      "minTemp",
+      "minTempDiv",
     );
-    let maxTemp = createP(
+
+    let minTempLabel = createP(
+      minTempDiv.cloneDivCreate,
+      "Min:",
+      "minTempLabel",
+    );
+
+    let minTemp = createP(minTempDiv.cloneDivCreate, day.tempmin, "minTemp");
+
+    let maxTempDiv = createDivSection(
       minAndMaxDivContainer.cloneDivCreate,
-      day.tempmax,
-      "maxTemp",
+      "maxTempDiv",
     );
+
+    let maxTempLabel = createP(
+      maxTempDiv.cloneDivCreate,
+      "Max:",
+      "maxTempLabel",
+    );
+
+    let maxTemp = createP(maxTempDiv.cloneDivCreate, day.tempmax, "maxTemp");
     let dayWeatherReport = createP(
       dayDiv.cloneDivCreate,
       day.conditions,

@@ -58,6 +58,11 @@ form {
   justify-content: center;
 }
 
+.minAndMaxDiv > div {
+  width: 100%;
+  display: flex;
+}
+
 .dayTemp {
   display: flex;
   justify-content: center;
