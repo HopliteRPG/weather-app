@@ -58,7 +58,7 @@ form {
   justify-content: center;
 }
 
-.minAndMaxDiv > p {
-  padding-left: 15px;
-  padding-right: 15px;
+.dayTemp {
+  display: flex;
+  justify-content: center;
 }
