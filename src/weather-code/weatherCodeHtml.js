@@ -101,7 +101,7 @@ function createWeatherGrid(weatherWeek) {
 
     let dateP = createP(
       dayDiv.cloneDivCreate,
-      format(parseISO(date), "MM/dd/yyyy"),
+      format(parseISO(date), "EEEE, MM/dd/yyyy"),
       "dateP",
     );
 
