@@ -1,4 +1,6 @@
 export { createWeatherGrid };
+import { format, parseISO } from "date-fns";
+
 const body = document.querySelector("body");
 const divCreate = document.createElement("div");
 const buttonCreate = document.createElement("button");
@@ -94,8 +96,14 @@ function createWeatherGrid(weatherWeek) {
     );
 
     let maxTemp = createP(maxTempDiv.cloneDivCreate, day.tempmax, "maxTemp");
+    let date = day.datetime;
+    console.log(date);
 
-    let dateP = createP(dayDiv.cloneDivCreate, day.datetime, "dateP");
+    let dateP = createP(
+      dayDiv.cloneDivCreate,
+      format(parseISO(date), "MM/dd/yyyy"),
+      "dateP",
+    );
 
     let dayWeatherReport = createP(
       dayDiv.cloneDivCreate,
