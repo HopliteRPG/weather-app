@@ -94,6 +94,9 @@ function createWeatherGrid(weatherWeek) {
     );
 
     let maxTemp = createP(maxTempDiv.cloneDivCreate, day.tempmax, "maxTemp");
+
+    let dateP = createP(dayDiv.cloneDivCreate, day.datetime, "dateP");
+
     let dayWeatherReport = createP(
       dayDiv.cloneDivCreate,
       day.conditions,
