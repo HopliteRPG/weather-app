@@ -1,5 +1,6 @@
 export { createWeatherGrid };
 import { format, parseISO } from "date-fns";
+import snowIcon from "../photos/snow.svg";
 
 const body = document.querySelector("body");
 const divCreate = document.createElement("div");
@@ -36,6 +37,7 @@ function createImage(div, imgClass) {
   cloneImageCreate.classList.add(imgClass);
   cloneImageCreate.src = "#";
   div.appendChild(cloneImageCreate);
+  return { cloneImageCreate };
 }
 
 function createForm(parentDiv) {
@@ -66,6 +68,13 @@ function createWeatherGrid(weatherWeek) {
   weatherWeekForcast.forEach((day) => {
     let dayDiv = createDivSection(weatherDiv, "dayDiv");
     let dayTemp = createP(dayDiv.cloneDivCreate, day.temp, "dayTemp");
+    let dayIcon = createImage(dayDiv.cloneDivCreate, "dayIcon");
+    console.log(dayIcon);
+    switch (day.icon) {
+      case "snow":
+        dayIcon.cloneImageCreate.src = snowIcon;
+    }
+
     let minAndMaxDivContainer = createDivSection(
       dayDiv.cloneDivCreate,
       "minAndMaxDiv",
