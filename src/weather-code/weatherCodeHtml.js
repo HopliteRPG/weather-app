@@ -1,6 +1,14 @@
 export { createWeatherGrid };
 import { format, parseISO } from "date-fns";
 import snowIcon from "../photos/snow.svg";
+import rainIcon from "../photos/rain.svg";
+import fogIcon from "../photos/fog.svg";
+import windIcon from "../photos/wind.svg";
+import cloudyIcon from "../photos/cloudy.svg";
+import partlyCloudyDay from "../photos/partly-cloudy-day.svg";
+import partlyCloudyNight from "../photos/partly-cloudy-night.svg";
+import clearDay from "../photos/clear-day.svg";
+import clearNight from "../photos/clear-night.svg";
 
 const body = document.querySelector("body");
 const divCreate = document.createElement("div");
@@ -73,6 +81,31 @@ function createWeatherGrid(weatherWeek) {
     switch (day.icon) {
       case "snow":
         dayIcon.cloneImageCreate.src = snowIcon;
+        break;
+      case "rain":
+        dayIcon.cloneImageCreate.src = rainIcon;
+        break;
+      case "fog":
+        dayIcon.cloneImageCreate.src = fogIcon;
+        break;
+      case "wind":
+        dayIcon.cloneImageCreate.src = windIcon;
+        break;
+      case "cloudy":
+        dayIcon.cloneImageCreate.src = cloudyIcon;
+        break;
+      case "partly-cloudy-day":
+        dayIcon.cloneImageCreate.src = partlyCloudyDay;
+        break;
+      case "partly-cloudy-night":
+        dayIcon.cloneImageCreate.src = partlyCloudyNight;
+        break;
+      case "clear-day":
+        dayIcon.cloneImageCreate.src = clearDay;
+        break;
+      case "clear-night":
+        dayIcon.cloneImageCreate.src = clearNight;
+        break;
     }
 
     let minAndMaxDivContainer = createDivSection(
