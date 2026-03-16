@@ -12,7 +12,7 @@ async function getLocationWeather(location) {
 
     const weatherData = await response.json();
     console.log(weatherData);
-    createWeatherGrid(weatherData.days);
+    createWeatherGrid(weatherData);
   } catch (error) {
     console.error(error);
     alert("Location not found try a different one");
