@@ -64,17 +64,19 @@ function createInput(div, type, name, inputName) {
   return { cloneInputCreate };
 }
 
-function clearWeatherDiv() {
-  const weatherDiv = document.querySelector(".weatherDiv");
-  weatherDiv.innerText = "";
+function clearWeatherDivContainer() {
+  const weatherDivContainer = document.querySelector(".weatherDivContainer");
+  weatherDivContainer.innerText = "";
 }
 
 function createWeatherGrid(weatherWeek) {
-  clearWeatherDiv();
+  clearWeatherDivContainer();
+  const weatherDivContainer = document.querySelector(".weatherDivContainer");
+  console.log(weatherDivContainer);
+  const weatherDiv = createDivSection(weatherDivContainer, "weatherDiv");
   const weatherWeekForcast = weatherWeek.slice(0, 7);
-  const weatherDiv = document.querySelector(".weatherDiv");
   weatherWeekForcast.forEach((day) => {
-    let dayDiv = createDivSection(weatherDiv, "dayDiv");
+    let dayDiv = createDivSection(weatherDiv.cloneDivCreate, "dayDiv");
     let dayTemp = createP(dayDiv.cloneDivCreate, day.temp, "dayTemp");
     let dayIcon = createImage(dayDiv.cloneDivCreate, "dayIcon");
     console.log(dayIcon);
