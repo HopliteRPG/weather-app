@@ -41,6 +41,7 @@ form {
   flex: 1;
   border: 1px black solid;
   border-radius: 10px;
+  background-color: lightgray;
 }
 
 .forecastTitleDiv {
@@ -95,4 +96,9 @@ form {
 .dayWeatherReport {
   display: flex;
   justify-content: center;
+}
+
+.forecastTitle,
+.locationP {
+  color: white;
 }
