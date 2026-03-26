@@ -72,7 +72,6 @@ function clearWeatherDivContainer() {
 function createWeatherGrid(weatherData) {
   clearWeatherDivContainer();
   const weatherWeek = weatherData.days;
-  // console.log();
   const weatherDivContainer = document.querySelector(".weatherDivContainer");
   const locationP = createP(weatherDivContainer, weatherData.resolvedAddress);
   const weatherDiv = createDivSection(weatherDivContainer, "weatherDiv");

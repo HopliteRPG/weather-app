@@ -28,6 +28,7 @@ form {
 
 .weatherDivContainer {
   height: 500px;
+  padding: 10px;
 }
 
 .weatherDiv {

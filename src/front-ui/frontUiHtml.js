@@ -94,9 +94,9 @@ function createFrontUiHtml() {
     weatherDivContainer.cloneDivCreate,
     "weatherDiv",
   );
-  let placeholderP = createP(
+  let locationP = createP(
     weatherDiv.cloneDivCreate,
-    "this is a test",
-    "placeholderP",
+    "Please Enter a Location",
+    "locationP",
   );
 }
