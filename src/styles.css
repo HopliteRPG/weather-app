@@ -77,3 +77,12 @@ form {
   font-family: Times, serif;
   font-weight: bold;
 }
+
+.searchbarInput {
+  margin-left: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
