@@ -86,3 +86,11 @@ form {
   display: flex;
   justify-content: center;
 }
+
+.minTempDiv,
+.maxTempDiv,
+.dateP,
+.dayWeatherReport {
+  display: flex;
+  justify-content: center;
+}
