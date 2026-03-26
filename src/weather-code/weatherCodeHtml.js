@@ -73,7 +73,11 @@ function createWeatherGrid(weatherData) {
   clearWeatherDivContainer();
   const weatherWeek = weatherData.days;
   const weatherDivContainer = document.querySelector(".weatherDivContainer");
-  const locationP = createP(weatherDivContainer, weatherData.resolvedAddress);
+  const locationP = createP(
+    weatherDivContainer,
+    weatherData.resolvedAddress,
+    "locationP",
+  );
   const weatherDiv = createDivSection(weatherDivContainer, "weatherDiv");
   const weatherWeekForcast = weatherWeek.slice(0, 7);
   weatherWeekForcast.forEach((day) => {
