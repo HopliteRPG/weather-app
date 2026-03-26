@@ -68,3 +68,12 @@ form {
   display: flex;
   justify-content: center;
 }
+
+.locationP {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: Times, serif;
+  font-weight: bold;
+}
